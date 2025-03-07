@@ -14,14 +14,11 @@ public class Read {
 			while(sc.hasNextLine())
 			{
 				a.add(sc.nextLine());
-				
 			}
 		}
 		catch(FileNotFoundException e) {
 			 System.out.println("File not found error");
 			 e.printStackTrace();
-	         
-			 
 		}
 		return a;
 	} 

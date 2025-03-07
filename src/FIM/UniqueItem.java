@@ -3,10 +3,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 
-public class UniqueItem { // Fixed class name
-    public static ArrayList<Integer> uniqueItems() { 
-        String path = "DB/sampleDb.csv"; 
-        ArrayList<String> data = Read.readFile(path); 
+public class UniqueItem { 
+    public static ArrayList<String> uniqueItems(ArrayList<String> data) {  
         HashSet<Integer> uniqueItems = new HashSet<>(); 
 
         for (String line : data) {
@@ -18,7 +16,10 @@ public class UniqueItem { // Fixed class name
 
         ArrayList<Integer> sortedList = new ArrayList<>(uniqueItems); 
         Collections.sort(sortedList);
-
-        return sortedList;
+        ArrayList<String> strList = new ArrayList<>();
+        for (Integer num : sortedList) {
+            strList.add(num.toString());
+        }
+        return strList;
     }
 }
