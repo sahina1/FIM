@@ -3,8 +3,6 @@ import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.io.File;
 import java.util.ArrayList;
-
-
 public class Read {
 	public static ArrayList<String> readFile(String path)
 	{

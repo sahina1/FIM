@@ -6,14 +6,12 @@ import java.util.HashSet;
 public class UniqueItem { 
     public static ArrayList<String> uniqueItems(ArrayList<String> data) {  
         HashSet<Integer> uniqueItems = new HashSet<>(); 
-
         for (String line : data) {
             String[] items = line.split(","); 
             for (String item : items) {
                     uniqueItems.add(Integer.parseInt(item)); 
             }
         }
-
         ArrayList<Integer> sortedList = new ArrayList<>(uniqueItems); 
         Collections.sort(sortedList);
         ArrayList<String> strList = new ArrayList<>();
