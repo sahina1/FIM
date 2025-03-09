@@ -5,7 +5,6 @@ import java.util.HashSet;
 
 public class UniqueItem { 
     public static ArrayList<String> uniqueItems(ArrayList<String> data) { 
-    	int count=0;
         HashSet<Integer> uniqueItems = new HashSet<>(); 
         for (String line : data) {
             String[] items = line.split(","); 
@@ -18,7 +17,6 @@ public class UniqueItem {
         ArrayList<String> strList = new ArrayList<>();
         for (Integer num : sortedList) {
             strList.add(num.toString());
-            count++;
         }
         
         return strList;

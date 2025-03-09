@@ -25,9 +25,9 @@ public class Main {
         }
         System.out.println(); 
 
-        System.out.println("Total Unique Elements: " + Total.total(result));
+        System.out.println("Total Unique Elements:" + Total.total(result));
 
-        // Fix: Pass result instead of undefined uniqueCounts
+        
         FileSeperation.fileSeperation(result, data, strList);
     }
 }
