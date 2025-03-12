@@ -15,7 +15,7 @@ public class Main {
 
         System.out.println("UNIQUE ELEMENTS:");
         for (String item : strList) { 
-            System.out.print(item + " ");
+            System.out.print(item +" ");
         }
         System.out.println(); 
 
@@ -25,9 +25,7 @@ public class Main {
         }
         System.out.println(); 
 
-        System.out.println("Total Unique Elements:" + Total.total(result));
-
-        
+        System.out.println("Total Unique Elements: " + Total.total(result));
         FileSeperation.fileSeperation(result, data, strList);
     }
 }

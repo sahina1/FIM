@@ -18,7 +18,6 @@ public class UniqueItem {
         for (Integer num : sortedList) {
             strList.add(num.toString());
         }
-        
         return strList;
     }
     
