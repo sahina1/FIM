@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.HashSet;
 
 public class UniqueItem { 
-    public static ArrayList<String> uniqueItems(ArrayList<String> data) { 
+	 public static ArrayList<ArrayList<?>> uniqueItems(ArrayList<String> data)  { 
         HashSet<Integer> uniqueItems = new HashSet<>(); 
         for (String line : data) {
             String[] items = line.split(","); 
@@ -18,7 +18,11 @@ public class UniqueItem {
         for (Integer num : sortedList) {
             strList.add(num.toString());
         }
-        return strList;
+        ArrayList<ArrayList<?>> result = new ArrayList<>();
+        result.add(strList);     
+        result.add(sortedList);  
+
+        return result;
     }
     
 }

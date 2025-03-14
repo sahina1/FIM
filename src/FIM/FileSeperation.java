@@ -1,11 +1,13 @@
 package FIM;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class FileSeperation {
-    public static void fileSeperation(ArrayList<Integer> ic, ArrayList<String> data, ArrayList<String> strList) {
-        ArrayList<String> result = new ArrayList<>();
+    public static Map<String, ArrayList<String>> fileSeperation(ArrayList<Integer> ic, ArrayList<String> data, ArrayList<String> strList) {
+        ArrayList<String> actual = new ArrayList<>();
         ArrayList<String> discard = new ArrayList<>();
         ArrayList<String> finalList = new ArrayList<>();
         int halfMax = ic.size() / 2;
@@ -13,7 +15,7 @@ public class FileSeperation {
             if (ic.get(i) > halfMax) {
                 discard.add(data.get(i)); 
             } else {
-                result.add(data.get(i)); 
+                actual.add(data.get(i)); 
             }
         }
         ArrayList<String> updatedDiscard = new ArrayList<>();
@@ -35,9 +37,10 @@ public class FileSeperation {
             }
         }
         FileUpdate.writeToFile("DB/updated_file.csv", finalList);
-        System.out.println("Updated List:");
-        for (String line : finalList) {
-            System.out.println(line);
-        }
+        Map<String, ArrayList<String>> seperation = new HashMap<>();
+        seperation.put("actual", actual);
+        seperation.put("updatedDiscard", updatedDiscard);
+        seperation.put("finalList", finalList);
+        return seperation;
     }
 }
